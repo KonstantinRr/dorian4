@@ -10,8 +10,6 @@ npm-debug.log*
 node_modules
 
 # Development/Environment
-.env
-.env.*
 test-env.txt
 !.env.example
 !.env.template
