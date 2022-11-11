@@ -8,6 +8,7 @@ module.exports = async function parse(url){
 	let head
 	try{ head = await axios.head(url) } catch(err){
 		head = err.response
+		console.log(`Head is "${head}"`)
 		const path = head.request.path
 		if(path != `/404` && path != `/404.html`){
 			return
