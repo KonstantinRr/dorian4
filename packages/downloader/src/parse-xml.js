@@ -7,7 +7,9 @@ module.exports = async function parseXml(data){
 	})
 	$(`loc`).each((_, el) => {
 		const loc = $(el)
+		console.log(`Loc: "${loc}"`) 
 		const url = loc.text()
+		console.log(`Url parsed: "${url}"`)
 		if(url){
 			this.addToQueue(url)
 			const newUrl = this.convertUrl(url)
