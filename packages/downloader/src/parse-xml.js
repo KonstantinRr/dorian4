@@ -11,9 +11,11 @@ module.exports = async function parseXml(data){
 		const url = loc.text()
 		console.log(`Url parsed: "${url}"`)
 		if(url){
+			console.log(`Doing the other stuff now`)
 			this.addToQueue(url)
 			const newUrl = this.convertUrl(url)
 			loc.html(newUrl)
+			console.log(`Finito`)
 		}
 	})
 	const newXml = $.xml()
