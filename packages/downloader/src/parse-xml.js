@@ -9,7 +9,7 @@ module.exports = async function parseXml(data){
 		const loc = $(el)
 		console.log(`Loc: "${loc}"`) 
 		const url_o = loc.text()
-		console.log(`Url parsed: "${url}"`)
+		console.log(`Url parsed: "${url_o}"`)
 		if(url_o){
 			console.log(`Doing the other stuff now`)
 			const url = url_o.trim()
