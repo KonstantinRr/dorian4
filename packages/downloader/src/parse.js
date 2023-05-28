@@ -20,6 +20,7 @@ module.exports = async function parse(url){
 	if(contentType.indexOf(`application/rss`) === 0 || contentType.indexOf(`application/xml`) === 0){
 		let result
 		try{ result = await axios.get(url) } catch(err){ return }
+		console.log(`Response is "${result.data}"`)
 		const newContents = await this.parseXml(result.data)
 		await this.writeFile(url, newContents, `xml`)
 	}
